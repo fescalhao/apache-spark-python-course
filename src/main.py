@@ -1,3 +1,4 @@
+from RDD import *
 from DataFrame import *
 
 # -------------- RDD Examples --------------
@@ -14,11 +15,6 @@ from DataFrame import *
 # word_count_df.main()
 # total_amount_spent_by_customer_df.main()
 # ------------------------------------------
-from lib.logger import Log4j
-from lib.spark_utils import get_spark_session
 
 if __name__ == '__main__':
-    # spark = get_spark_session('Bla')
-    # logger = Log4j(spark.sparkContext)
-    # logger.info('Reading fakefriends.csv file')
-    average_friends_by_age_df.main()
+    word_count_df.main()
