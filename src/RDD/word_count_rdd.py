@@ -1,6 +1,6 @@
 import re
 
-from Examples.spark_utils import get_spark_context, read_file
+from lib.spark_utils import get_spark_context, read_file
 
 
 def main():

@@ -1,0 +1,6 @@
+21/07/06 12:21:51 INFO Average Friends By Age Reading fakefriends.csv file
+21/07/06 12:21:51 INFO Average Friends By Age Mapping necessary fields
+21/07/06 12:21:52 INFO Average Friends By Age Creating a DataFrame
+21/07/06 12:21:53 INFO Average Friends By Age Calculating the average frinds by age
+21/07/06 12:21:53 INFO Average Friends By Age Printing results
+21/07/06 12:21:55 INFO Average Friends By Age Stopping spark session
