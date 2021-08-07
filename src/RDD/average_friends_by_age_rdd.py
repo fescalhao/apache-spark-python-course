@@ -1,10 +1,10 @@
 from typing import Tuple
-from lib.spark_utils import get_spark_context, read_file
+from lib.spark_utils import get_spark_context, read_file_rdd
 
 
 def main():
     spark = get_spark_context('Average Friends By Age')
-    lines = read_file(spark, 'datasets/fakefriends.csv')
+    lines = read_file_rdd(spark, 'datasets/fakefriends.csv')
     rdd = lines.map(parse_line)
 
     total_by_age = rdd \

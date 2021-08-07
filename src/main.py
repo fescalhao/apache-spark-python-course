@@ -17,4 +17,4 @@ from DataFrame import *
 # ------------------------------------------
 
 if __name__ == '__main__':
-    word_count_df.main()
+    most_popular_movie_df.main()

@@ -1,9 +1,9 @@
-from lib.spark_utils import get_spark_context, read_file
+from lib.spark_utils import get_spark_context, read_file_rdd
 
 
 def main():
     spark = get_spark_context("Total Amount Spent By Customer")
-    lines = read_file(spark, 'datasets/customer-orders.csv')
+    lines = read_file_rdd(spark, 'datasets/customer-orders.csv')
     rdd = lines.map(parse_line)
 
     total_spent = rdd \

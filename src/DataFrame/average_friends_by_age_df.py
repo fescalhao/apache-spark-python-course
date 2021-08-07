@@ -2,7 +2,7 @@ from pyspark import Row
 from pyspark.sql.functions import avg, round, desc
 
 from lib.logger import Log4j
-from lib.spark_utils import get_spark_session, read_file
+from lib.spark_utils import get_spark_session, read_file_rdd
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
     logger = Log4j(spark.sparkContext)
 
     logger.info('Reading fakefriends.csv file')
-    lines = read_file(spark.sparkContext, 'datasets/fakefriends.csv')
+    lines = read_file_rdd(spark.sparkContext, 'datasets/fakefriends.csv')
 
     logger.info('Mapping necessary fields')
     people = lines.map(mapper)

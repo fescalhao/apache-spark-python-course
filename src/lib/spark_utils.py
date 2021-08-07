@@ -17,7 +17,7 @@ def get_spark_session(app_name: str) -> SparkSession:
         .getOrCreate()
 
 
-def read_file(spark: SparkContext, path: str) -> RDD:
+def read_file_rdd(spark: SparkContext, path: str) -> RDD:
     return spark.textFile(os.path.abspath(path))
 
 

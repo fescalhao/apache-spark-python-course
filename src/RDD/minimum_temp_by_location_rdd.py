@@ -1,11 +1,11 @@
 import os.path
 from typing import Tuple
-from lib.spark_utils import get_spark_context, read_file
+from lib.spark_utils import get_spark_context, read_file_rdd
 
 
 def main():
     spark = get_spark_context('Minimum Temperature By Location')
-    lines = read_file(spark, os.path.abspath('datasets/1800.csv'))
+    lines = read_file_rdd(spark, os.path.abspath('datasets/1800.csv'))
     rdd = lines.map(lambda line: parse_line(line))
 
     min_rdd = rdd \
