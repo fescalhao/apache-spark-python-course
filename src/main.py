@@ -14,7 +14,9 @@ from DataFrame import *
 # minimum_temp_by_location_df.main()
 # word_count_df.main()
 # total_amount_spent_by_customer_df.main()
+# most_popular_movie_df.main()
+# most_popular_superhero_df.main()
 # ------------------------------------------
 
 if __name__ == '__main__':
-    most_popular_movie_df.main()
+    most_popular_superhero_df.main()
